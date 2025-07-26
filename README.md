@@ -3,113 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>College Login</title>
+  <title>Simple Online Shopping</title>
   <style>
-    /* Reset some default styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
     body {
-      background: #f0f4f8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
     }
 
-    .login-container {
-      background: white;
-      padding: 2.5rem 3rem;
-      border-radius: 8px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      width: 350px;
-    }
-
-    .login-container h2 {
+    header {
       text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
       color: #333;
-      margin-bottom: 1.5rem;
     }
 
-    form {
+    .products {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
 
-    label {
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: #555;
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 220px;
+      padding: 15px;
+      text-align: center;
     }
 
-    input[type="text"],
-    input[type="password"] {
-      padding: 0.6rem 0.8rem;
-      margin-bottom: 1.3rem;
-      border: 1.5px solid #ddd;
-      border-radius: 5px;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 12px;
     }
 
-    input[type="text"]:focus,
-    input[type="password"]:focus {
-      border-color: #3a86ff;
-      outline: none;
-      box-shadow: 0 0 5px rgba(58, 134, 255, 0.4);
+    .product-name {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .product-price {
+      color: #2a9d8f;
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
     }
 
     button {
-      padding: 0.75rem;
-      background-color: #3a86ff;
-      color: white;
-      font-size: 1.1rem;
+      background-color: #e76f51;
       border: none;
+      padding: 10px 15px;
+      color: white;
+      font-size: 1rem;
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #2c6cd1;
-    }
-
-    .forgot-password {
-      margin-top: 0.8rem;
-      text-align: right;
-      font-size: 0.9rem;
-    }
-
-    .forgot-password a {
-      color: #3a86ff;
-      text-decoration: none;
-    }
-
-    .forgot-password a:hover {
-      text-decoration: underline;
+      background-color: #d45c3f;
     }
   </style>
 </head>
 <body>
-  <div class="login-container">
-    <h2>College Login</h2>
-    <form action="#" method="post">
-      <label for="username">Username or Email</label>
-      <input type="text" id="username" name="username" placeholder="Enter your username or email" required />
+  <header>
+    <h1>Online Shopping</h1>
+  </header>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+  <div class="products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/220x150?text=Product+1" alt="Product 1" />
+      <div class="product-name">Classic Sneakers</div>
+      <div class="product-price">$59.99</div>
+      <button>Add to Cart</button>
+    </div>
 
-      <button type="submit">Login</button>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/220x150?text=Product+2" alt="Product 2" />
+      <div class="product-name">Stylish Backpack</div>
+      <div class="product-price">$45.00</div>
+      <button>Add to Cart</button>
+    </div>
 
-      <div class="forgot-password">
-        <a href="#">Forgot password?</a>
-      </div>
-    </form>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/220x150?text=Product+3" alt="Product 3" />
+      <div class="product-name">Wireless Headphones</div>
+      <div class="product-price">$79.50</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/220x150?text=Product+4" alt="Product 4" />
+      <div class="product-name">Smart Watch</div>
+      <div class="product-price">$120.00</div>
+      <button>Add to Cart</button>
+    </div>
   </div>
 </body>
 </html>
