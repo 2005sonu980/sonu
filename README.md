@@ -2,58 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amazon Clone</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>College Login</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 0.6rem 0.8rem;
+      margin-bottom: 1.3rem;
+      border: 1.5px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #3a86ff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(58, 134, 255, 0.4);
+    }
+
+    button {
+      padding: 0.75rem;
+      background-color: #3a86ff;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2c6cd1;
+    }
+
+    .forgot-password {
+      margin-top: 0.8rem;
+      text-align: right;
+      font-size: 0.9rem;
+    }
+
+    .forgot-password a {
+      color: #3a86ff;
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="navbar">
-    <div class="logo">Amazon</div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search products..." />
-      <button>Search</button>
-    </div>
-    <div class="nav-links">
-      <a href="#">Login</a>
-      <a href="#">Cart</a>
-    </div>
-  </header>
+  <div class="login-container">
+    <h2>College Login</h2>
+    <form action="#" method="post">
+      <label for="username">Username or Email</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username or email" required />
 
-  <!-- Hero Banner -->
-  <section class="hero">
-    <h1>Big Deals on Electronics</h1>
-    <p>Up to 60% Off | Limited Time Offer</p>
-  </section>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
 
-  <!-- Products Section -->
-  <section class="products">
-    <h2>Featured Products</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Product 1" />
-        <h3>Smartphone</h3>
-        <p>₹9999</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Product 2" />
-        <h3>Headphones</h3>
-        <p>₹399</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Product 3" />
-        <h3>Laptop</h3>
-        <p>₹49999</p>
-        <button>Add to Cart</button>
-      </div>
-    </div>
-  </section>
+      <button type="submit">Login</button>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Amazon Clone. Created for educational purposes.</p>
-  </footer>
+      <div class="forgot-password">
+        <a href="#">Forgot password?</a>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
